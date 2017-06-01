@@ -11,8 +11,7 @@
 
   <h1 class="speed">
     <span class="speed-value">0</span>
-    <span class="units">&nbsp; MPH</span>
-   
+    <span class="units">KM/H</span>
   </h1>
 
   <style>
@@ -58,17 +57,30 @@
   <script>
     const arrow = document.querySelector('.arrow');
     const speed = document.querySelector('.speed-value');
-    
-    function round(value, decimals) {
-  return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
-}
+    // navigator.geolocation.watchPosition((data) => {
+    //   console.log(data);
+    //   speed.textContent = data.coords.speed;
+    //   arrow.style.transform = `rotate(${data.coords.heading}deg)`;
+    // }, (err) => {
+    //   console.error(err);
+    // });
+
+    if ('geolocation' in navigator) {
+    navigator.geolocation.getCurrentPosition(function(location) {
+      conole.log(location);
+    });
     navigator.geolocation.watchPosition((data) => {
       console.log(data);
-      speed.textContent = round(data.coords.speed * 0.621371,2);
+      speed.textContent = data.coords.speed;
       arrow.style.transform = `rotate(${data.coords.heading}deg)`;
     }, (err) => {
       console.error(err);
     });
+ 
+} else {
+  alert('Geolocation API not supported.');
+}
+
   </script>
 </body>
 </html>
