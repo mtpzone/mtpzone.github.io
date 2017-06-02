@@ -31,7 +31,7 @@
 
   <h1 class="speed">
     <span class="speed-value">0</span>
-    <span class="units">BKM/H</span>
+    <span class="units">CKM/H</span>
   </h1>
   <h1 class="speed">
     <div class="lat-value">1</div>
@@ -108,13 +108,12 @@
     //   console.error(err);
     // });
     if ('geolocation' in navigator) {
-      navigator.geolocation.getCurrentPosition(function (location) {
-        console.log(location);
-      });
+      //navigator.geolocation.getCurrentPosition(function (location) {
+       // console.log(location);
+     // });
       navigator.geolocation.watchPosition((data) => {
         console.log(data);
         lat.textContent = data.coords.latitude;
-        data.
         lon.textContent = data.coords.longitude;
         heading.textContent = data.coords.heading;
 
