@@ -76,7 +76,7 @@
 
     if ('geolocation' in navigator) {
     navigator.geolocation.getCurrentPosition(function(location) {
-      conole.log(location);
+      console.log(location);
     });
     navigator.geolocation.watchPosition((data) => {
       console.log(data);
