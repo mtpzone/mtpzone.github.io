@@ -31,7 +31,7 @@
 
   <h1 class="speed">
     <span class="speed-value">0</span>
-    <span class="units">KM/H</span>
+    <span class="units">BKM/H</span>
   </h1>
   <h1 class="speed">
     <div class="lat-value">1</div>
@@ -88,12 +88,17 @@
     /*Compass: https://thenounproject.com/search/?q=compass&i=592352*/
   </style>
   <script>
+    var options = {
+      enableHighAccuracy: true,
+      timeout: 5000,
+      maximumAge: 0
+    };
     const arrow = document.querySelector('.arrow');
     const speed = document.querySelector('.speed-value');
     const lat = document.querySelector('.lat-value');
     const lon = document.querySelector('.lon-value');
     const heading = document.querySelector('.heading-value');
-    
+
 
     // navigator.geolocation.watchPosition((data) => {
     //   console.log(data);
@@ -109,6 +114,7 @@
       navigator.geolocation.watchPosition((data) => {
         console.log(data);
         lat.textContent = data.coords.latitude;
+        data.
         lon.textContent = data.coords.longitude;
         heading.textContent = data.coords.heading;
 
@@ -116,7 +122,7 @@
         arrow.style.transform = `rotate(${data.coords.heading}deg)`;
       }, (err) => {
         console.error(err);
-      });
+      }, options);
 
     } else {
       alert('Geolocation API not supported.');
