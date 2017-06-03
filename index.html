@@ -116,8 +116,8 @@
         lon.textContent = data.coords.longitude;
         heading.textContent = data.coords.heading;
 
-        speedmph.textContent = data.coords.speed * 0.62;
-        speedkmph.textContent = data.coords.speed;
+        speedmph.textContent = (data.coords.speed * 0.621371).toFixed(2);
+        speedkmph.textContent = (data.coords.speed).toFixed(2);
         arrow.style.transform = `rotate(${data.coords.heading}deg)`;
       }, (err) => {
         console.error(err);
