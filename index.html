@@ -30,9 +30,13 @@
 
 
   <h1 class="speed">
-    <span class="speed-value">0</span>
-    <span class="units">CKM/H</span>
+    <span class="speed-valuemph">0</span>
+    <span class="units">MPH</span>
   </h1>
+  <h1 class="speed">
+    <span class="speed-valuekmph">0</span>
+    <span class="units">KM/H</span>
+  </h1
   <h1 class="speed">
     <div class="lat-value">1</div>
   </h1>
@@ -94,30 +98,26 @@
       maximumAge: 0
     };
     const arrow = document.querySelector('.arrow');
-    const speed = document.querySelector('.speed-value');
+    const speedmph = document.querySelector('.speed-valuemph');
+    const speedkmph = document.querySelector('.speed-valuekmph');
     const lat = document.querySelector('.lat-value');
     const lon = document.querySelector('.lon-value');
     const heading = document.querySelector('.heading-value');
 
 
-    // navigator.geolocation.watchPosition((data) => {
-    //   console.log(data);
-    //   speed.textContent = data.coords.speed;
-    //   arrow.style.transform = `rotate(${data.coords.heading}deg)`;
-    // }, (err) => {
-    //   console.error(err);
-    // });
     if ('geolocation' in navigator) {
-      //navigator.geolocation.getCurrentPosition(function (location) {
-       // console.log(location);
-     // });
+      // navigator.geolocation.getCurrentPosition(function (location) {
+      //   console.log(location);
+      // });
       navigator.geolocation.watchPosition((data) => {
         console.log(data);
         lat.textContent = data.coords.latitude;
+        
         lon.textContent = data.coords.longitude;
         heading.textContent = data.coords.heading;
 
-        speed.textContent = data.coords.speed;
+        speedmph.textContent = data.coords.speed * 0.621371;
+        speedkmph.textContent = data.coords.speed;
         arrow.style.transform = `rotate(${data.coords.heading}deg)`;
       }, (err) => {
         console.error(err);
