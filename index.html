@@ -39,13 +39,13 @@
   </h1>
   <h1 class="speed">
     <span class="heading-value">0</span>
-    <span> Heading</span>
+    <span  class="units"> Heading</span>
   </h1>
   <h1 class="speed">
-    <div class="lat-value">1</div><span> lat</span>
+    <div class="lat-value">1</div><span  class="units"> lat</span>
   </h1>
   <h1 class="speed">
-    <div class="lon-value">2</div><span> lon</span>
+    <div class="lon-value">2</div><span  class="units"> lon</span>
   </h1>
   
   <style>
@@ -118,7 +118,7 @@
         heading.textContent = data.coords.heading;
 
         speedmph.textContent = (data.coords.speed * 0.621371).toFixed(2);
-        speedkmph.textContent = (data.coords.speed).toFixed(2);
+        speedkmph.textContent = (data.coords.speed * 0.00).toFixed(2);
         arrow.style.transform = `rotate(${-data.coords.heading}deg)`;
       }, (err) => {
         console.error(err);
