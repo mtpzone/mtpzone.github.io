@@ -61,8 +61,8 @@
 
 
   <h1 class="speed">
-    <span class="speed-valuemph">0</span>
-    <span class="units">MPH</span>
+    <span class="speed-valuemph mphspeed">0</span>
+    <span class="mphunits">MPH</span>
   </h1>
   <h1 class="speed">
     <span class="speed-valuekmph">0</span>
@@ -87,7 +87,8 @@
     body {
       margin: 0;
       font-family: sans-serif;
-      min-height: 100vh;
+      /*min-height: 100vh;*/
+      padding-top: 20px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -173,8 +174,22 @@
       margin: 0px;
     }
 
+/*.speed-value {
+      color: white;
+      font-weight: 100;
+      font-size: 90px;
+      display: flex;
+      align-items: center;
+      margin: 0px;
+    }*/
     .units {
       font-size: 15px;
+    }
+    .mphunits {
+      font-size: 25px;
+    }
+    .mphspeed {
+      font-size: 60px;
     }
   </style>
   <script>
