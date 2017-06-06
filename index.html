@@ -57,6 +57,24 @@
     <div class="westdir">
       <div class="ntext">W</div>
     </div>
+
+
+    <div class="dots-rotate">
+      <div class="dots-n">
+        <!--<div class="ntext">N</div>-->
+      </div>
+      <div class="dots-s">
+        <!--<div class="ntext">S</div>-->
+      </div>
+      <div class="dots-e">
+        <!--<div class="ntext">E</div>-->
+      </div>
+      <div class="dots-w">
+        <!--<div class="ntext">W</div>-->
+      </div>
+    </div>
+
+
   </div>
 
 
@@ -101,9 +119,9 @@
       height: 200px;
       transform: rotate(0deg);
       background: grey;
-      -moz-border-radius: 250px;
-      -webkit-border-radius: 250px;
-      border-radius: 250px;
+      -moz-border-radius: 200px;
+      -webkit-border-radius: 200px;
+      border-radius: 200px;
     }
 
     .image {
@@ -120,6 +138,66 @@
       left: 16px;
       top: 10px;
     }
+
+    .dots-rotate {
+      position: absolute;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      transform: rotate(45deg);
+
+
+    }
+
+    .dots-n {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      left: 95px;
+      top: 25px;
+      background: rgb(60%, 60%, 60%);
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+    }
+
+    .dots-s {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      left: 95px;
+      bottom: 25px;
+      background: rgb(60%, 60%, 60%);
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+    }
+
+    .dots-e {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      right: 25px;
+      top: 100px;
+      background: rgb(60%, 60%, 60%);
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+    }
+
+    .dots-w {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      left: 25px;
+      top: 100px;
+      background: rgb(60%, 60%, 60%);
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+    }
+
+    
 
     .northdir {
       /*background-color: blue;*/
@@ -173,8 +251,7 @@
       align-items: center;
       margin: 0px;
     }
-
-/*.speed-value {
+    /*.speed-value {
       color: white;
       font-weight: 100;
       font-size: 90px;
@@ -182,12 +259,15 @@
       align-items: center;
       margin: 0px;
     }*/
+
     .units {
       font-size: 15px;
     }
+
     .mphunits {
       font-size: 25px;
     }
+
     .mphspeed {
       font-size: 60px;
     }
