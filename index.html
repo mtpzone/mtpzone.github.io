@@ -298,7 +298,7 @@
         lon.textContent = data.coords.longitude.toFixed(2);
         heading.textContent = data.coords.heading;
         speedmph.textContent = (data.coords.speed * 0.621371).toFixed(2);
-        speedkmph.textContent = (data.coords.speed * 0.00).toFixed(2);
+        speedkmph.textContent = (data.coords.speed * 1.00).toFixed(2);
         arrow.style.transform = `rotate(${-data.coords.heading}deg)`;
         northdir.style.transform = `rotate(${data.coords.heading}deg)`;
         southdir.style.transform = `rotate(${data.coords.heading}deg)`;
