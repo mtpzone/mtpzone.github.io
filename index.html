@@ -302,7 +302,7 @@
         console.log(data);
         lat.textContent = data.coords.latitude.toFixed(2);
         lon.textContent = data.coords.longitude.toFixed(2);
-        heading.textContent = data.coords.heading.toFixed(2);
+        heading.textContent = (data.coords.heading * 1.0).toFixed(2);
         speedmph.textContent = (data.coords.speed * 2.23694).toFixed(2);
         speedkmph.textContent = (data.coords.speed * 3.6000059687997).toFixed(2);
         arrow.style.transform = `rotate(${-data.coords.heading}deg)`;
