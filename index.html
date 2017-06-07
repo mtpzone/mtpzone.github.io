@@ -314,11 +314,11 @@
         heading.textContent = (data.coords.heading * 1.0).toFixed(2);
         speedmph.textContent = (data.coords.speed * 2.23694).toFixed(2);
         speedkmph.textContent = (data.coords.speed * 3.6000059687997).toFixed(2);
-        arrow.style.transform = `rotate(${-data.coords.heading}deg)`;
-        northdir.style.transform = `rotate(${data.coords.heading}deg)`;
-        southdir.style.transform = `rotate(${data.coords.heading}deg)`;
-        eastdir.style.transform = `rotate(${data.coords.heading}deg)`;
-        westdir.style.transform = `rotate(${data.coords.heading}deg)`;
+        arrow.style.transform = `rotate(${-data.coords.heading * 1.0}deg)`;
+        northdir.style.transform = `rotate(${data.coords.heading * 1.0}deg)`;
+        southdir.style.transform = `rotate(${data.coords.heading * 1.0}deg)`;
+        eastdir.style.transform = `rotate(${data.coords.heading * 1.0}deg)`;
+        westdir.style.transform = `rotate(${data.coords.heading * 1.0}deg)`;
       }, (err) => {
         console.error(err);
       }, options);
