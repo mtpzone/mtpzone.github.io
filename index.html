@@ -45,19 +45,19 @@
       </g>
     </svg>
 
-<div align="center">
-    <div class="northdir">
-      <div class="ntext">N</div>
-    </div>
-    <div class="southdir">
-      <div class="ntext">S</div>
-    </div>
-    <div class="eastdir">
-      <div class="ntext">E</div>
-    </div>
-    <div class="westdir">
-      <div class="ntext">W</div>
-    </div>
+    <div align="center">
+      <div class="northdir">
+        <div class="ntext">N</div>
+      </div>
+      <div class="southdir">
+        <div class="ntext">S</div>
+      </div>
+      <div class="eastdir">
+        <div class="ntext">E</div>
+      </div>
+      <div class="westdir">
+        <div class="ntext">W</div>
+      </div>
     </div>
 
 
@@ -110,12 +110,19 @@
       /*       font-family: sans-serif; */
       /*min-height: 100vh;*/
       padding-top: 20px;
+
       display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: center;
-    align-items: center;
+      display: flex;
+      
+      -webkit-align-items: center;
+      align-items: center;
+
+
+      /*display: flex;*/
+      -webkit-justify-content: center;
       justify-content: center;
-/*       align-items: center; */
+      /*align-items: center;*/
+      -webkit-flex-direction: column;
       flex-direction: column;
       background-color: #282828;
     }
@@ -331,7 +338,6 @@
       alert('Geolocation API not supported.');
     }
   </script>
-  1
 </body>
-
+2
 </html>
