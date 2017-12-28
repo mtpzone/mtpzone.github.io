@@ -146,6 +146,10 @@ if (!mobile) { document.location = "http://www.google.com/"; }
     <div class="lon-value">2</div><span class="units"> lon</span>
   </h1>
 
+  
+  <button type="button" onclick="testclick()">click</button>
+  
+  
   <style>
     html {
       font-family: monospace;
@@ -384,6 +388,25 @@ if (!mobile) { document.location = "http://www.google.com/"; }
     } else {
       alert('Geolocation API not supported.');
     }
+    
+    
+    function testclick()
+{
+  // alert("test");
+  var request = new XMLHttpRequest();
+request.open('POST', 'http://108.70.155.72/upbtrans.htm', true);
+request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+request.setRequestHeader('Authorization', 'Basic ' + 'YWRtaW46YnViYmFnaXJsMQ==');
+// request.setRequestHeader('Accept', 'application/json');
+request.send("port=0&command=08040B19FF22644B");
+
+request.onreadystatechange = function () {
+    if (request.readyState === 4) {
+       alert(request.responseText);
+    }
+};
+}
+    
   </script>
 </body>
 
